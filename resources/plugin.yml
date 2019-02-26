@@ -1,0 +1,9 @@
+name: CommandPlayTime
+version: 1.0
+author: ZentoFX
+main: ru.ZentoFX.cpt.Core
+commands:
+  time:
+    description: Показывает сколько игрок находиться на сервере.
+  prize:
+    description: Открывает меню с призами.

@@ -1,0 +1,72 @@
+Message:
+  Prefix: '&aＴｉｍｅ &l> &e'
+  Time: 'Вы играете на сервере &c%time%&e.'
+  NotTime: 'Вы отыграли слишком мало. Поиграй ещё &c%time%&e чтобы получить данный приз.'
+  NotPlayer: 'Вас не обнаруженно в базеданных, перезайдите.'
+  Already: '&cВы уже получили этот донат.'
+Menu: #Меню
+  Name: '&rПризы за время на сервере'
+  Slot: 5 #Количество линий
+  Items: #Предметы в меню
+    Premium:
+      Name: '&eПривелегия &6Premium'
+      Item: '95:2'
+      Slot: 13
+      Lore: ' %n%&7Чтобы получить отыграйте на сервере: &c48м%n% %n%&eНажмите, чтобы получить приз.'
+      Commands: 'type:Premium'
+    Legend:
+      Name: '&eПривелегия &bLegend'
+      Item: '95:3'
+      Slot: 14
+      Lore: ' %n%&7Чтобы получить отыграйте на сервере: &c1ч 12м%n% %n%&eНажмите, чтобы получить приз.'
+      Commands: 'type:Legend'
+    Ultra:
+      Name: '&eПривелегия &dUltra'
+      Item: '95:4'
+      Slot: 15
+      Lore: ' %n%&7Чтобы получить отыграйте на сервере: &c1ч 36м%n% %n%&eНажмите, чтобы получить приз.'
+      Commands: 'type:Ultra'
+    Sponsor:
+      Name: '&eПривелегия &eSponsor'
+      Item: '95:5'
+      Slot: 16
+      Lore: ' %n%&7Чтобы получить отыграйте на сервере: &c2ч%n% %n%&eНажмите, чтобы получить приз.'
+      Commands: 'type:Sponsor'
+    Close:
+      Name: '&cЗакрыть'
+      Item: '262'
+      Slot: 40
+      Commands: 'close()'
+    Info:
+      Name: '&aИнформация'
+      Item: '397:3'
+      Slot: 41
+      Lore: ' %n%&7Вы отыграли на сервере: &c%time%%n%&7С последнего захода играете: &c%lasttime%%n% %n%&eНажмите, чтобы обновить статистику.'
+      Commands: 'update()'
+    TestItem: #Тип итема (Не повторять!)
+      Name: '&aTestItem' #Название предмета (Не повторять!)
+      Item: '7' #3 - ID Предмета | 3:1 - ID:DATA Предмета | 3:10:1 ID:MORE:DATA Предмета
+      Slot: 42 #Слот в гуи
+      Lore: '&fLORE%n%LORE' #%n% - новая страка | %name% - имя игрока | %displayname% - дисплэй имя игрока | %time% - время на сервере | %lasttime% - последняя активность
+      Commands: 'update()' #close() - закрывает GUI | update() - обновляет GUI | cmd:op %player% - после 'cmd:' команду через консоль (%player% - имя игрока) | type:donate - после 'type' названия приза
+Prize: #Призы
+  Premium:
+    Time: 1440
+    Commands: 'pex user %player% group set premim'
+    Message: 'Вы получили привелегию &6Premium'
+  Legend:
+    Time: 2880
+    Commands: 'pex user %player% group set legend'
+    Message: 'Вы получили привелегию &bLegend'
+  Ultra:
+    Time: 4320
+    Commands: 'pex user %player% group set ultra'
+    Message: 'Вы получили привелегию &dUltra'
+  Sponsor:
+    Time: 7200
+    Commands: 'pex user %player% group set sponsor'
+    Message: 'Вы получили привелегию &eSponsor'
+  TestPrize: #Тип приза (Не повторять!)
+    Time: 60 #Время в секундах когда получать приз
+    Commands: 'pex user %player% group set sponsor' #Команда для получении приза (%player% - имя игрока)
+    Message: 'Вы получили привелегию &eSponsor' #Сообщение о получении приза
