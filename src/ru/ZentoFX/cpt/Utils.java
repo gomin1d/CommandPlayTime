@@ -93,7 +93,7 @@ public class Utils {
         if (playerz.getTime() >= Config.getPrizeTime(type)) {
 
             if (Core.getPlayerData().getPrizes(playerz.getName()).contains(type)) {
-                player.sendMessage(Config.getPrefix() + Config.getPrizeMessage(type));
+                player.sendMessage(Config.getPrefix() + Config.getAlready());
                 return;
             }
 
